@@ -45,7 +45,7 @@ Feel free to check the [issues page](../../issues/).
 
 ## Show your support
 
-Give a star if you like this project!
+ Original design idea by [Nelson Sakwa on Behance](https://www.behance.net/sakwadesignstudio)
 
 ## Acknowledgments
 
