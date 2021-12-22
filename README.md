@@ -17,11 +17,11 @@
 
 
 ## Live Demo
-- at [Live Demo](https://angry-borg-c6fc5f.netlify.app/)
+- [Live Demo](https://angry-borg-c6fc5f.netlify.app/)
 
 ## Video Link
 
-at [Video Link](https://drive.google.com/file/d/16wc568N9VZYNf3OdTY__uGTyeUs9UM0V/view?usp=sharing)
+- [Video Link](https://drive.google.com/file/d/16wc568N9VZYNf3OdTY__uGTyeUs9UM0V/view?usp=sharing)
 
 ## Getting Started
  - Get the repository into your PC.
@@ -40,7 +40,7 @@ at [Video Link](https://drive.google.com/file/d/16wc568N9VZYNf3OdTY__uGTyeUs9UM0
 - go to the directory that you want to clone the repository in.
 right-click and choose Git Bash here.
 type "git clone "https://github.com/mbdesigns1989/React-capstone-webapp".
-run "npm install" and then "npm start"  "npm run test".
+run `npm install` and then `npm start`  `npm run test`.
 
 ## Author
 
