@@ -17,7 +17,7 @@
 
 
 ## Live Demo
-- at http://localhost:3000/
+- at  https://angry-borg-c6fc5f.netlify.app/
 
 ## Getting Started
 
