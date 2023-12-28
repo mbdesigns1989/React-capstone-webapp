@@ -12,6 +12,7 @@ exports[`renders correctly 1`] = `
         href="/"
         onClick={[Function]}
       >
+         
         <svg
           fill="currentColor"
           height="1em"
@@ -34,23 +35,24 @@ exports[`renders correctly 1`] = `
             d="M15.41 16.59L10.83 12l4.58-4.59L14 6l-6 6 6 6 1.41-1.41z"
           />
         </svg>
+         
       </a>
     </div>
     <div
-      className="nav-header"
+      className="nav-heading"
     >
       <a
         href="/"
         onClick={[Function]}
       >
-        COVID-19 STATS
+        COVID-19 DATA
       </a>
     </div>
     <div
       className="nav-icons"
     >
       <div
-        className="nav-icon-one"
+        className="nav-icon"
       >
         <svg
           fill="none"
@@ -79,7 +81,7 @@ exports[`renders correctly 1`] = `
         </svg>
       </div>
       <div
-        className="nav-icon-two"
+        className="nav-icon"
       >
         <svg
           fill="currentColor"
@@ -106,18 +108,18 @@ exports[`renders correctly 1`] = `
     </div>
   </div>
   <header
-    className="details-header"
+    className="details-heading"
   >
     <div
-      className="details-header-data"
+      className="details-heading-data"
     >
       <div
-        className="details-header-data-h"
+        className="details-heading-data-t"
       >
-        Kenya
+        BOSNIA
       </div>
       <p
-        className="details-header-data-p"
+        className="details-heading-data-tc"
       />
     </div>
   </header>
@@ -127,10 +129,10 @@ exports[`renders correctly 1`] = `
     STATS BY COUNTRY
   </p>
   <ul
-    className="details-section"
+    className="details-div"
   >
     <li
-      className="details-section-li"
+      className="details-div-li"
     >
       <span>
         Recovered
@@ -139,7 +141,7 @@ exports[`renders correctly 1`] = `
       <span />
     </li>
     <li
-      className="details-section-li"
+      className="details-div-li"
     >
       <span>
         Active
@@ -148,7 +150,7 @@ exports[`renders correctly 1`] = `
       <span />
     </li>
     <li
-      className="details-section-li"
+      className="details-div-li"
     >
       <span>
         Critical
@@ -157,7 +159,7 @@ exports[`renders correctly 1`] = `
       <span />
     </li>
     <li
-      className="details-section-li"
+      className="details-div-li"
     >
       <span>
         Tests
@@ -166,7 +168,7 @@ exports[`renders correctly 1`] = `
       <span />
     </li>
     <li
-      className="details-section-li"
+      className="details-div-li"
     >
       <span>
         Deaths

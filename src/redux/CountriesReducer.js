@@ -1,41 +1,41 @@
 export const GET_COUNTRIES = 'countries/countries/GET_COUNTRIES';
 export const GET_COUNTRY_DATA = 'countries/countries/GET_COUNTRY_DATA';
-export const GET_AFRICA = 'countries/countries/GET_AFRICA';
+export const GET_EUROPE = 'countries/countries/GET_EUROPE';
 
 const initialState = {
   countries: [],
   countryData: [],
-  africa: [],
+  europe: [],
   continent: [],
   loggedIn: true,
 };
 
 export const getCountries = () => async (dispatch) => {
-  const data = await fetch(
+  const response = await fetch(
     'https://disease.sh/v3/covid-19/countries',
     { method: 'GET' },
   );
-  const bfData = await data.json();
-  const newData = bfData.filter((country) => country.continent === 'Africa');
+  const acData = await response.json();
+  const newData = acData.filter((country) => country.continent === 'Europe');
   dispatch({ type: GET_COUNTRIES, newData });
 };
 
-export const getAfricaData = () => async (dispatch) => {
-  const data = await fetch(
-    'https://disease.sh/v3/covid-19/continents/africa?strict=true',
+export const getEuropeData = () => async (dispatch) => {
+  const response = await fetch(
+    'https://disease.sh/v3/covid-19/continents/europe?strict=true',
     { method: 'GET' },
   );
-  const afriData = await data.json();
-  const africa = afriData.cases;
-  dispatch({ type: GET_AFRICA, africa });
+  const euroData = await response.json();
+  const europe = euroData.cases;
+  dispatch({ type: GET_EUROPE, europe });
 };
 
 export const getCountryData = (country) => async (dispatch) => {
-  const data = await fetch(
+  const response = await fetch(
     `https://disease.sh/v3/covid-19/countries/${country}`,
     { method: 'GET' },
   );
-  const newData = await data.json();
+  const newData = await response.json();
   const countryData = {
     id: newData.countryInfo.iso2,
     totalcases: newData.cases,
@@ -53,8 +53,8 @@ const reducer = (state = initialState, action) => {
     case GET_COUNTRIES:
       return { ...state, countries: action.newData };
 
-    case GET_AFRICA:
-      return { ...state, africa: action.africa };
+    case GET_EUROPE:
+      return { ...state, europe: action.europe };
 
     case GET_COUNTRY_DATA:
       return { ...state, countryData: action.countryData };

@@ -30,17 +30,16 @@ a {
   align-self: flex-end;
 }
 
-.nav-icon-one,
-.nav-icon-two {
+.nav-icon {
   margin-left: 1rem;
   margin-right: 1rem;
 }
 
-.nav-header {
+.nav-heading {
   margin-left: 1rem;
 }
 
-.page-header {
+.page-heading {
   display: flex;
   text-align: center;
   width: 80%;
@@ -77,13 +76,13 @@ a {
   text-align: end;
 }
 
-.africa-img {
+.europe-img {
   width: 100px;
   height: 100px;
   color: #a79d9d;
 }
 
-.africa-img-desc {
+.europe-img-desc {
   margin-left: 2rem;
   font-size: 1.5em;
 }
@@ -92,11 +91,11 @@ a {
   text-transform: uppercase;
 }
 
-.details-header {
+.details-heading {
   margin: auto;
 }
 
-.details-header-data {
+.details-heading-data {
   height: 150px;
   display: flex;
   flex-direction: column;
@@ -106,19 +105,19 @@ a {
   text-transform: uppercase;
 }
 
-.details-header-data-h {
+.details-heading-data-t {
   font-size: 1.5em;
   padding: 0%;
   margin: 0%;
 }
 
-.details-header-data-p {
+.details-heading-data-tc {
   font-size: 1.2em;
   padding: 0%;
   margin: 0%;
 }
 
-.details-section {
+.details-div {
   color: white;
   margin: auto;
   padding: 0%;
@@ -128,7 +127,7 @@ a {
   width: 100%;
 }
 
-.details-section-li {
+.details-div-li {
   height: 5rem;
   display: flex;
   justify-content: space-between;
@@ -137,17 +136,17 @@ a {
   align-items: center;
 }
 
-.details-section-li:nth-child(odd) {
+.details-div-li:nth-child(odd) {
   color: white;
   background-color: #334ca7;
 }
 
-.details-section-li:nth-child(even) {
+.details-div-li:nth-child(even) {
   color: white;
   background-color: #214498f8;
 }
 
-.middle {
+.heading-p {
   display: flex;
   background-color: #214498f8;
   margin-top: 0.2rem;

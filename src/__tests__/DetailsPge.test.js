@@ -5,7 +5,7 @@ import { BrowserRouter as Router } from 'react-router-dom';
 import DescripionCard from '../pages/DetailsPage';
 import store from '../redux/ConfigStore';
 
-const country = 'Kenya';
+const country = 'BOSNIA';
 it('renders correctly', () => {
   const tree = renderer
     .create(

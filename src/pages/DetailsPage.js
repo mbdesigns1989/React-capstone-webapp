@@ -14,20 +14,20 @@ const DescriptionCard = (props) => {
 
   return (
     <div className='body details-page'>
-      <Navbar txt={'Details'}/>
-      <header className='details-header'>
-        <div className='details-header-data'>
-          <div className='details-header-data-h'>{country}</div>
-          <p className='details-header-data-p'>{(countryStats.totalcases)}</p>
+      <Navbar value={'Details'}/>
+      <header className='details-heading'>
+        <div className='details-heading-data'>
+          <div className='details-heading-data-t'>{country}</div>
+          <p className='details-heading-data-tc'>{(countryStats.totalcases)}</p>
         </div>
       </header>
       <p className='middle'>STATS BY COUNTRY</p>
-      <ul className='details-section'>
-        <li className='details-section-li' ><span>Recovered</span> <span>{(countryStats.recovered)}</span></li>
-        <li className='details-section-li' ><span>Active</span> <span>{(countryStats.active)}</span></li>
-        <li className='details-section-li' ><span>Critical</span> <span>{(countryStats.critical)}</span></li>
-        <li className='details-section-li' ><span>Tests</span> <span>{(countryStats.tests)}</span></li>
-        <li className='details-section-li' ><span>Deaths</span> <span>{(countryStats.deaths)}</span></li>
+      <ul className='details-div'>
+        <li className='details-div-li' ><span>Recovered</span> <span>{(countryStats.recovered)}</span></li>
+        <li className='details-div-li' ><span>Active</span> <span>{(countryStats.active)}</span></li>
+        <li className='details-div-li' ><span>Critical</span> <span>{(countryStats.critical)}</span></li>
+        <li className='details-div-li' ><span>Tests</span> <span>{(countryStats.tests)}</span></li>
+        <li className='details-div-li' ><span>Deaths</span> <span>{(countryStats.deaths)}</span></li>
       </ul>
     </div>
   );

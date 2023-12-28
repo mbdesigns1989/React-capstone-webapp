@@ -2,20 +2,20 @@ const data = [
   {
     countries: [
       {
-        country: 'Algeria',
-        cases: 400000,
+        country: 'BOSNIA',
+        cases: 403443,
       },
     ],
     countryData: {
-      active: 300,
-      critical: 8,
-      deaths: 600,
-      id: 'ALG',
-      recovered: 32000,
-      tests: 66700,
-      totalcases: 400000,
+      active: 7985,
+      critical: 0,
+      deaths: 16374,
+      id: 'BIH',
+      recovered: 379084,
+      tests: 1884721,
+      totalcases: 403443,
     },
-    africa: 700000,
+    europe: 720000,
   },
 ];
 
