@@ -19,9 +19,6 @@
 ## Live Demo
 - [Live Demo](https://angry-borg-c6fc5f.netlify.app/)
 
-## Video Link
-
-- [Video Link](https://drive.google.com/file/d/16wc568N9VZYNf3OdTY__uGTyeUs9UM0V/view?usp=sharing)
 
 ## Getting Started
  - Get the repository into your PC.
