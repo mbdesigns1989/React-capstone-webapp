@@ -3,7 +3,7 @@ import { Provider } from 'react-redux';
 import renderer from 'react-test-renderer';
 import { BrowserRouter as Router } from 'react-router-dom';
 import CountryCard from '../pages/CountriesPage';
-import store from '../redux/ConfigStore';
+import store from '../redux/Store';
 
 describe('Home snapshot', () => {
   test('renders correctly', () => {
