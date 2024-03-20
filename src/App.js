@@ -1,7 +1,7 @@
 import { Route, Switch } from 'react-router-dom';
 import { useSelector } from 'react-redux';
-import BodyList from './pages/CountriesPage';
-import ItemDescription from './pages/DetailsPage';
+import CountryCard from './pages/CountriesPage';
+import CardDescription from './pages/DetailsPage';
 
 const App = () => {
   const countries = useSelector((state) => state.data.countries);
@@ -11,11 +11,11 @@ const App = () => {
       <Switch>
         {countries.map((country) => (
           <Route exact path={`/${country.country}`} key={country}>
-            <ItemDescription country={country.country} />
+            <CardDescription country={country.country} />
           </Route>
         ))}
         <Route exact path='/'>
-          <BodyList />
+          <CountryCard />
         </Route>
 
       </Switch>

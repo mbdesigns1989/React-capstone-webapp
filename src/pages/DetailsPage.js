@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import Navbar from '../components/Navbar';
 import { getCountryData } from '../redux/CountriesReducer';
 
-const DescriptionCard = (props) => {
+const CardDescription = (props) => {
   const { country } = props;
   const dispatch = useDispatch();
   const countryStats = useSelector((state) => state.data.countryData);
@@ -14,7 +14,7 @@ const DescriptionCard = (props) => {
 
   return (
     <div className='body details-page'>
-      <Navbar value={'Details'}/>
+      <Navbar value={'Details'} />
       <header className='details-heading'>
         <div className='details-heading-data'>
           <div className='details-heading-data-t'>{country}</div>
@@ -33,4 +33,4 @@ const DescriptionCard = (props) => {
   );
 };
 
-export default DescriptionCard;
+export default CardDescription;
