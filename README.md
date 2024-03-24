@@ -14,7 +14,7 @@
 
 
 ## Live Demo
-- [Live Demo](https://angry-borg-c6fc5f.netlify.app/)
+- [Live Demo](https://65ffca1d159c7fa0e2cec388--stately-basbousa-d7484e.netlify.app/)
 
 
 ## Getting Started
