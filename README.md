@@ -39,9 +39,9 @@ run `npm install` and then `npm start`  `npm run test`.
 ## Author
 
 - Mohamed Badr
-- GitHub: (https://github.com/mbdesigns1989)
-- Twitter: (https://twitter.com/mohamed66083152)
-- LinkedIn: (https://www.linkedin.com/in/mohamed-badr-mb/)
+- [GitHub](https://github.com/mbdesigns1989)
+- [Twitter_X](https://twitter.com/mohamed66083152)
+- [LinkedIn](https://www.linkedin.com/in/mohamed-badr-27b26a212/)
 
 ##  Contributing
 
