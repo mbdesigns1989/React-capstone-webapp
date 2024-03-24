@@ -9,7 +9,7 @@
 - React
 - React Router
 - Redux
-- npm
+- Jest for testing
 - diseases API  (https://disease.sh/)
 
 
