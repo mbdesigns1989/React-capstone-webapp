@@ -10,24 +10,25 @@ const CardDescription = (props) => {
 
   useEffect(() => {
     dispatch(getCountryData(country));
-  }, []);
+  }, [country, dispatch]);
 
   return (
     <div className='body details-page'>
-      <Navbar value={'Details'} />
+      <Navbar value='Details' />
       <header className='details-heading'>
         <div className='details-heading-data'>
           <div className='details-heading-data-t'>{country}</div>
-          <p className='details-heading-data-tc'>{(countryStats.totalcases)}</p>
+          <p className='details-heading-data-tc'>{countryStats.totalcases}</p>
         </div>
       </header>
       <p className='middle'>STATS BY COUNTRY</p>
       <ul className='details-div'>
-        <li className='details-div-li' ><span>Recovered</span> <span>{(countryStats.recovered)}</span></li>
-        <li className='details-div-li' ><span>Active</span> <span>{(countryStats.active)}</span></li>
-        <li className='details-div-li' ><span>Critical</span> <span>{(countryStats.critical)}</span></li>
-        <li className='details-div-li' ><span>Tests</span> <span>{(countryStats.tests)}</span></li>
-        <li className='details-div-li' ><span>Deaths</span> <span>{(countryStats.deaths)}</span></li>
+        {Object.entries(countryStats).map(([key, value]) => (
+          <li key={key} className='details-div-li'>
+            <span>{key.charAt(0).toUpperCase() + key.slice(1)}</span>
+            <span>{value}</span>
+          </li>
+        ))}
       </ul>
     </div>
   );

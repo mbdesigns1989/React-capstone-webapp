@@ -10,24 +10,26 @@ import { getCountries, getEuropeData } from '../redux/CountriesReducer';
 const CountryCard = () => {
   const countries = useSelector((state) => state.data.countries);
   const europe = useSelector((state) => state.data.europe);
-  const [fetchedData, setFetchedData] = useState(countries);
   const dispatch = useDispatch();
+  const [fetchedData, setFetchedData] = useState([]);
 
   useEffect(() => {
     dispatch(getCountries());
-  }, []);
-  useEffect(() => {
     dispatch(getEuropeData());
-  }, []);
+  }, [dispatch]);
 
   useEffect(() => {
-    if (fetchedData.length < 0) {
-      fetchedData.sort((a, b) => b.cases - a.cases);
-    }
-    setFetchedData(() => countries);
+    setFetchedData(countries);
   }, [countries]);
 
   const toStr = (num) => num.toLocaleString();
+
+  const sortCountries = (order) => {
+    const sortedData = [...fetchedData].sort((a, b) => (
+      order === 'asc' ? a.cases - b.cases : b.cases - a.cases
+    ));
+    setFetchedData(sortedData);
+  };
 
   return (
     <div className='body'>
@@ -45,32 +47,30 @@ const CountryCard = () => {
           <div>{toStr(europe)}</div>
         </div>
       </header>
-        <div className='heading-p'>
-          <p>STATS BY CONTINENT</p>
-          <div className='filter-btns'>
-            <button className='buttonn' onClick = {() => setFetchedData([].concat(fetchedData).sort((a, b) => b.cases - a.cases))}>
-              Highest cases</button>
-            <button className='buttonn' onClick = {() => setFetchedData([].concat(fetchedData).sort((a, b) => a.cases - b.cases))}>
-            Lowest cases</button>
-          </div>
+      <div className='heading-p'>
+        <p>STATS BY CONTINENT</p>
+        <div className='order-btns'>
+          <button className='order-btn' onClick={() => sortCountries('desc')}>
+            Highest cases
+          </button>
+          <button className='order-btn' onClick={() => sortCountries('asc')}>
+            Lowest cases
+          </button>
         </div>
-        <div className='country-details'>
-          {countries && fetchedData.map((country) => (
-            <div className='country-data' key={uuidv4()}>
-            <Link to={`/${country.country}`}>
-              <div className='country-flag'>
-                <img src={country.countryInfo.flag} alt='logo-img' className='flag-img' />
-              </div>
+      </div>
+      <div className='country-details'>
+        {fetchedData.map((country) => (
+          <div className='country-data' key={uuidv4()}>
+            <Link to={`/${country.country}`} className='country-flag'>
+              <img src={country.countryInfo.flag} alt='logo-img' className='flag-img' />
               <div className='country-cases'>
-                <p className='country'>
-                  {country.country}
-                </p>
-                <div className=''>{toStr(country.cases)}</div>
+                <p className='country'>{country.country}</p>
+                <div>{toStr(country.cases)}</div>
               </div>
             </Link>
-            </div>
-          ))}
-        </div>
+          </div>
+        ))}
+      </div>
     </div>
   );
 };

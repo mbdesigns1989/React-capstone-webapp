@@ -163,7 +163,7 @@ a {
   margin-right: 0.5rem;
 }
 
-.buttonn {
+.order-btn {
   cursor: pointer;
   border: none;
   background-color: #334ca7;
@@ -171,7 +171,7 @@ a {
   margin: 0.2rem;
 }
 
-.filter-btns {
+.order-btns {
   display: flex;
   flex-direction: column;
 }

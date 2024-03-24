@@ -125,16 +125,16 @@ exports[`Home snapshot renders correctly 1`] = `
       STATS BY CONTINENT
     </p>
     <div
-      className="filter-btns"
+      className="order-btns"
     >
       <button
-        className="buttonn"
+        className="order-btn"
         onClick={[Function]}
       >
         Highest cases
       </button>
       <button
-        className="buttonn"
+        className="order-btn"
         onClick={[Function]}
       >
         Lowest cases

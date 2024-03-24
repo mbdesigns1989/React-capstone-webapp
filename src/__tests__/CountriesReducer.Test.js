@@ -36,17 +36,27 @@ describe('getEurope returns specific values', () => {
 });
 
 describe('This is a reducer', () => {
-  test('Retrieve data fom API and change state', () => {
+  test('Retrieve data from API and change state', () => {
+    const data = [
+      { country: 'BOSNIA', cases: 403443 },
+    ];
+
     const action = {
       type: GET_COUNTRIES,
       newData: data,
     };
-    const newState = reducer({}, action);
-    const { country } = newState.countries[0].countries[0];
-    const { cases } = newState.countries[0].countries[0];
+
+    const initialState = {
+      countries: [],
+    };
+
+    const newState = reducer(initialState, action);
+    const { country, cases } = newState.countries[0];
+
     expect(country).toBe('BOSNIA');
     expect(cases).toEqual(403443);
   });
+
   test('should return specific values', () => {
     const action = {
       type: GET_COUNTRIES,
@@ -79,9 +89,14 @@ describe('This is a reducer', () => {
     expect(reducer({}, action)).toBeTruthy();
   });
   test('The state should be truthy after action GET_EUROPE', () => {
+    const initialState = {
+      europe: null,
+    };
     const action = {
       type: GET_EUROPE,
+      europe: 'Europe data',
     };
-    expect(reducer({}, action)).toBeTruthy();
+    const newState = reducer(initialState, action);
+    expect(newState).toBeTruthy();
   });
 });
