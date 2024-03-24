@@ -1,4 +1,4 @@
-# Metrics webapp
+# Metrics Web App
 > This is the React capstone project at Microverse Program where I am working with data from diseases API, this app will allow users to view the COVID-19 cases in countries in Europe.
 
 ## Built With
